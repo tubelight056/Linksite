@@ -1,0 +1,36 @@
+.OuterContainerNotFound {
+  position: absolute;
+  width: 70vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.h1NotFound {
+  font-family: "Source Code Pro", monospace;
+  font-size: clamp(28px, 2vw, 50px);
+  display: block;
+  text-align: center;
+  color: #3b72ff;
+  margin: 40px 0 10px 0;
+  padding: 20px 20px 10px 20px;
+
+  line-height: 50px;
+}
+
+.pNotFound {
+  font-family: "Space mono", sans-serif;
+  display: block;
+  text-align: center;
+}
+
+.wowtext {
+  font-size: clamp(60px, 2vw, 4rem);
+  display: block;
+  line-height: 150px;
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-decoration-color: #b34bf8;
+  text-decoration-thickness: 5px;
+  font-weight: bolder;
+}

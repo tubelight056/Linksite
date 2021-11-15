@@ -1,0 +1,86 @@
+.body {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  z-index: 5;
+  top: 0px;
+  left: 0px;
+}
+
+.modeulUpExitIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  text-align: end;
+  margin-left: 90%;
+}
+
+.outerModelUpScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  color: #010101;
+  background-color: rgba(179, 75, 248, 1);
+  padding: 30px 20px 30px 20px;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+.eachBox {
+  padding: 0 10px 0 20px;
+}
+.eachBox h3 {
+  display: inline-block;
+  font-family: "Source Code Pro", monospace;
+  font-size: 18px;
+  margin: 15px 0 10px 0;
+}
+
+.eachBox input {
+  padding: 10px;
+  width: 90%;
+  display: block;
+  font-family: "Space Mono", monospace;
+  border-radius: 0.5rem;
+  border-color: transparent;
+  border-style: solid;
+}
+.eachBox input:focus {
+  border-width: 2px 2px 2px 2px;
+  border-color: black;
+  outline-width: 0px;
+}
+
+.modelButton {
+  display: inline;
+  width: 50%;
+  align-self: center;
+  background-color: #ffffff;
+  border-color: #3b72ff;
+  padding: 16px 60px;
+  margin: 30px 0 10px 20px;
+  border-radius: 0.5rem;
+  border-style: solid;
+  font-weight: 700;
+  color: #3b72ff;
+}
+
+.modelButton:active {
+  background-color: #3b72ff;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 600px) {
+  .outerModelUpScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45vw;
+  }
+  .modelButton {
+    width: 45%;
+  }
+}

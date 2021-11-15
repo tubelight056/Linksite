@@ -1,0 +1,90 @@
+.louterContainer {
+  font-family: "Secular One", sans-serif;
+
+  font-family: "Source Code Pro", monospace;
+
+  font-family: "Space Mono", monospace;
+  max-width: 400px;
+  color: #010101;
+  background-color: #fef9ef;
+  padding: 10px 20px 10px 20px;
+  justify-content: center;
+}
+
+.loginh1 {
+  font-size: 2rem;
+  color: #3b72ff;
+  font-family: "Secular One", sans-serif;
+  margin: 10px 0 10px 0;
+}
+
+.leachItem h1 {
+  display: inline-block;
+  font-family: "Source Code Pro", monospace;
+  font-size: 18px;
+  margin: 15px 0 10px 0;
+}
+
+.leachItem .Input {
+  padding: 10px;
+  width: 80%;
+  display: block;
+  font-family: "Space Mono", monospace;
+  border-radius: 0.5rem;
+  border-style: solid;
+}
+
+.leachItem .Input:focus {
+  border-width: 2px 2px 2px 2px;
+  border-color: #3b72ff;
+}
+
+.lbutton {
+  background-color: #3b72ff;
+  border-color: #3b72ff;
+  padding: 16px 60px;
+  margin: 50px 0 10px 0;
+  border-radius: 0.5rem;
+  border-style: solid;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.lbutton:active {
+  background-color: #ffffff;
+  color: #3b72ff;
+}
+
+.lbandge {
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: red;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes pulser {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.lpulser {
+  width: inherit;
+  color: #ffffff;
+  height: inherit;
+  border-radius: inherit;
+  background-color: inherit;
+  animation: pulser 1s ease-out infinite;
+}
+
+.lbadgep {
+  position: relative;
+  z-index: 2;
+}

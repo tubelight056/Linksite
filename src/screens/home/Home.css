@@ -1,0 +1,87 @@
+.welcomeh1 {
+  font-family: "Secular One", sans-serif;
+  font-size: clamp(30px, 2vw, 50px);
+  display: block;
+  color: #3b72ff;
+  margin: 40px 0 40px 0;
+  padding: 20px 20px 10px 20px;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #b34bf8;
+}
+
+.errorMessageH1 {
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 18px;
+  font-weight: lighter;
+  color: white;
+  padding: 2%;
+  position: absolute;
+  z-index: 10;
+  border-radius: 0.5rem;
+  bottom: 5vh;
+  right: 5vw;
+  max-width: 400px;
+  font-family: "Space Mono", monospace;
+  animation: errorMessage 1.5s linear 1 alternate;
+}
+
+.outerBoxAddContainer {
+  display: inline;
+  margin: 10px;
+}
+
+.addCollection {
+  display: grid;
+  max-width: 98vw;
+  grid-template-columns: 70vw 30vw;
+  border-radius: 1rem;
+  font-size: 25px;
+  align-items: center;
+  border-color: #b34bf8;
+  border-width: 2px;
+  padding: 5px;
+  border-style: solid;
+  margin: 15px 10px 15px 10px;
+  background-color: white;
+}
+.addCollection:active {
+  border-size: 4px;
+}
+.homeInput {
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  font-family: "Space Mono", monospace;
+  border-color: transparent;
+  outline-width: 0px;
+  font-size: 24px;
+  margin: 15px 10px 15px 10px;
+  background-color: transparent;
+}
+.HomeAddIcon {
+  margin: 10px;
+}
+
+@keyframes errorMessage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .outerBoxAddContainer {
+    display: inline-flex;
+  }
+  .addCollection {
+    display: inline-flex;
+    max-width: 70vw;
+    grid-template-columns: 40vw 10vw;
+  }
+  .HomeAddIcon {
+    margin: 20px;
+  }
+}

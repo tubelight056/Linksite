@@ -1,0 +1,35 @@
+.outerBoxCollectionCard {
+  display: inline;
+}
+.innerBoxCollectionCard {
+  display: grid;
+  max-width: 98vw;
+  grid-template-columns: 70vw 30vw;
+  border-radius: 1rem;
+  align-items: center;
+  border-color: transparent;
+  margin: 15px 10px 15px 10px;
+  background-color: rgba(90, 211, 86, 0.6);
+}
+.collectionCardDeleteIcon {
+  margin: 10px;
+}
+
+.innerBoxCollectionCard h1 {
+  text-align: center;
+  font-size: 25px;
+  padding: 10px 20px 10px 20px;
+  font-family: "Space Mono", monospace;
+}
+
+@media screen and (min-width: 600px) {
+  .outerBoxCollectionCard {
+    display: inline-flex;
+  }
+  .innerBoxCollectionCard {
+    display: flex;
+  }
+  .collectionCardDeleteIcon {
+    margin: 20px;
+  }
+}
