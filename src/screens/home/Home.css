@@ -11,13 +11,13 @@
   text-decoration-color: #b34bf8;
 }
 
-.errorMessageH1 {
+.errorMessageH1Home {
   background-color: rgba(0, 0, 0, 0.7);
   font-size: 18px;
   font-weight: lighter;
   color: white;
   padding: 2%;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   border-radius: 0.5rem;
   bottom: 5vh;
@@ -58,6 +58,9 @@
   font-size: 24px;
   margin: 15px 10px 15px 10px;
   background-color: transparent;
+}
+.homeInput:focus {
+  outline: none;
 }
 .HomeAddIcon {
   margin: 10px;

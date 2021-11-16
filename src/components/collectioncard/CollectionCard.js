@@ -10,9 +10,9 @@ const Collectioncard = (props) => {
     props.onSelectCallBack({ collectionName, id });
   };
   return (
-    <div className="outerBoxCollectionCard" onClick={() => onClickCallBack()}>
+    <div className="outerBoxCollectionCard">
       <div className="innerBoxCollectionCard">
-        <h1>{collectionName}</h1>
+        <h1 onClick={() => onClickCallBack()}>{collectionName}</h1>
         <img
           className="collectionCardDeleteIcon"
           src={DeleteIcon}

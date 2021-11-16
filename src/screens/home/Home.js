@@ -126,7 +126,7 @@ const Home = (props) => {
         </div>
       </div>
       {errorMessage !== null && (
-        <h1 className="errorMessageH1">{`${errorMessage}`}</h1>
+        <h1 className="errorMessageH1Home">{`${errorMessage}`}</h1>
       )}
     </div>
   );

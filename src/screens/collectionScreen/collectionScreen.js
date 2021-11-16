@@ -42,12 +42,7 @@ const Collectionscreen = (props) => {
             setViewCounts(data.data.viewCounts);
           }
         } else {
-          if (data.data.statusMessage === "Invalid Id") {
-            history.push("/nopath");
-          } else {
-            history.push("/nopath");
-            onErrorHandler(data.data.statusMessage);
-          }
+          onErrorHandler(data.data.statusMessage);
         }
       })
       .catch((err) => {
@@ -203,7 +198,7 @@ const Collectionscreen = (props) => {
         )}
       </div>
       {errorMessage !== null && (
-        <h1 className="errorMessageH1">{`${errorMessage}`}</h1>
+        <h1 className="errorMessageH1Collection">{`${errorMessage}`}</h1>
       )}
     </div>
   );

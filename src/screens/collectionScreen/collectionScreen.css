@@ -1,10 +1,11 @@
-.errorMessageH1 {
+.errorMessageH1Collection {
   background-color: rgba(0, 0, 0, 0.7);
   font-size: 18px;
   font-weight: lighter;
   color: white;
   padding: 2%;
   position: fixed;
+  display: inline;
   z-index: 10;
   border-radius: 0.5rem;
   bottom: 5vh;
@@ -12,6 +13,7 @@
   max-width: 400px;
   font-family: "Space Mono", monospace;
   animation: errorMessage 1.5s linear 1 alternate;
+  position: fixed;
 }
 
 .collectionNameH1 {
@@ -72,7 +74,7 @@
 }
 
 .innerCollectionScreen {
-  padding-bottom: 5%;
+  padding-bottom: 2%;
 }
 
 .collectionButton {
