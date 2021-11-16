@@ -5,12 +5,10 @@ import EditIcon from "./editIcon.svg";
 import LinkCard from "../../components/LinkCard/LinkCard";
 import ModelUpForAdd from "../../components/modelUp/modelUpForAdd";
 import ModelUpForUpdate from "../../components/modelUp/modelUpForUpdate";
-import { useHistory } from "react-router";
 import config from "../../config";
 
 const Collectionscreen = (props) => {
   const collectionId = props.match.params.id;
-  const history = useHistory();
   const [name, setName] = useState();
   const [linkList, setLinkList] = useState([]);
   const [access, setAccess] = useState("denied");
@@ -110,7 +108,7 @@ const Collectionscreen = (props) => {
 
   useEffect(() => {
     getCollectionHandler();
-  }, []);
+  });
   return (
     <div className="outerCollectionScreen">
       <div className="innerCollectionScreen">

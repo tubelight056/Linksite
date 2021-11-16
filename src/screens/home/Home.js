@@ -83,7 +83,7 @@ const Home = (props) => {
   };
   useEffect(() => {
     getCollectionListHandler();
-  }, []);
+  });
   return (
     <div className="homeOuterScreen">
       <div className="homeInnerScreen">
