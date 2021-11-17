@@ -4,7 +4,7 @@ import Register from "../../components/Register/Register.js";
 import { useHistory } from "react-router";
 import "./authentication.css";
 import axios from "axios";
-import config from "../../config";
+import config from "../../url";
 
 const Authentication = () => {
   const history = useHistory();
