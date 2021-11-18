@@ -131,7 +131,7 @@ const Collectionscreen = (props) => {
             <button
               className="collectionButton"
               onClick={() => {
-                let text = `http://localhost:3000/collection/${collectionId}`;
+                let text = `https://link-site.netlify.app/collection/${collectionId}`;
                 navigator.clipboard.writeText(text);
                 onErrorHandler("Link copied with kind");
               }}
