@@ -13,7 +13,11 @@ const LinkCard = (props) => {
         props.access === "denied" && onClickCallBack();
       }}
     >
-      <div className="innerBoxlinkCard">
+      <div
+        className={
+          "innerBoxlinkCard " + (props.access !== "granted" ? "gridview" : " ")
+        }
+      >
         <h1
           onClick={() => {
             onClickCallBack();
