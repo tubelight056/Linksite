@@ -48,7 +48,7 @@ const Register = (props) => {
       props.errorCallBack("Email is missing");
     } else if (!validemail.test(email) && !missValue.includes(3)) {
       props.errorCallBack("Enter a valid E-mail");
-      setMissValue([...missValue, 1]);
+      setMissValue([...missValue, 3]);
     }
 
     if (name === "" && !missValue.includes(1)) {
