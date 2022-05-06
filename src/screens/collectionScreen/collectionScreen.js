@@ -25,7 +25,6 @@ const Collectionscreen = (props) => {
     }, [5000]);
   };
   const getCollectionHandler = async () => {
-    console.log("called");
     await axios
       .post(config.API_URL + "/collection/getcollection", {
         collectionId: collectionId,
@@ -116,7 +115,6 @@ const Collectionscreen = (props) => {
 
   useEffect(() => {
     getCollectionHandler();
-    console.log("useEffect");
   }, []);
 
   return (
