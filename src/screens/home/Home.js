@@ -4,7 +4,7 @@ import Collectioncard from "../../components/collectioncard/CollectionCard";
 import "./Home.css";
 import AddIcon from "./addIcon.ico";
 import { useHistory } from "react-router";
-import config from "../../url";
+import config from "../../config";
 
 const Home = (props) => {
   const history = useHistory();
@@ -83,11 +83,13 @@ const Home = (props) => {
   };
   useEffect(() => {
     getCollectionListHandler();
-  });
+  }, []);
   return (
     <div className="homeOuterScreen">
       <div className="homeInnerScreen">
-        <h1 className="welcomeh1">Welcome Prem ,Here your Collections</h1>
+        <h1 className="welcomeh1">
+          Welcome {sessionStorage.getItem("name")} ,Here your Collections
+        </h1>
         {collectionList !== [] &&
           collectionList.map((data) => (
             <Collectioncard
@@ -126,7 +128,7 @@ const Home = (props) => {
         </div>
       </div>
       {errorMessage !== null && (
-        <h1 className="errorMessageH1Home">{`${errorMessage}`}</h1>
+        <h1 className="errorMessageH1">{`${errorMessage}`}</h1>
       )}
     </div>
   );

@@ -5,10 +5,12 @@ import EditIcon from "./editIcon.svg";
 import LinkCard from "../../components/LinkCard/LinkCard";
 import ModelUpForAdd from "../../components/modelUp/modelUpForAdd";
 import ModelUpForUpdate from "../../components/modelUp/modelUpForUpdate";
-import config from "../../url";
+import { useHistory } from "react-router";
+import config from "../../config";
 
 const Collectionscreen = (props) => {
   const collectionId = props.match.params.id;
+  const history = useHistory();
   const [name, setName] = useState();
   const [linkList, setLinkList] = useState([]);
   const [access, setAccess] = useState("denied");
@@ -40,7 +42,12 @@ const Collectionscreen = (props) => {
             setViewCounts(data.data.viewCounts);
           }
         } else {
-          onErrorHandler(data.data.statusMessage);
+          if (data.data.statusMessage === "Invalid Id") {
+            history.push("/nopath");
+          } else {
+            history.push("/nopath");
+            onErrorHandler(data.data.statusMessage);
+          }
         }
       })
       .catch((err) => {
@@ -131,7 +138,7 @@ const Collectionscreen = (props) => {
             <button
               className="collectionButton"
               onClick={() => {
-                let text = `${window.location.origin}/collection/${collectionId}`;
+                let text = `http://localhost:3000/collection/${collectionId}`;
                 navigator.clipboard.writeText(text);
                 onErrorHandler("Link copied with kind");
               }}
@@ -196,7 +203,7 @@ const Collectionscreen = (props) => {
         )}
       </div>
       {errorMessage !== null && (
-        <h1 className="errorMessageH1Collection">{`${errorMessage}`}</h1>
+        <h1 className="errorMessageH1">{`${errorMessage}`}</h1>
       )}
     </div>
   );

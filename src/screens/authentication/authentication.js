@@ -17,6 +17,7 @@ const Authentication = () => {
 
   const onErrorHandler = (data) => {
     seterrorMessage(data);
+
     setTimeout(() => {
       seterrorMessage(null);
     }, [5000]);
