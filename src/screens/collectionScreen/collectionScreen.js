@@ -25,6 +25,7 @@ const Collectionscreen = (props) => {
     }, [5000]);
   };
   const getCollectionHandler = async () => {
+    console.log("called");
     await axios
       .post(config.API_URL + "/collection/getcollection", {
         collectionId: collectionId,
@@ -39,7 +40,7 @@ const Collectionscreen = (props) => {
           setCollectionName(data.data.collectionName);
           await setLinkList([...data.data.Links]);
           if (access === "granted") {
-            setViewCounts(data.data.viewCounts);
+            await setViewCounts(data.data.viewCounts);
           }
         } else {
           if (data.data.statusMessage === "Invalid Id") {
@@ -115,7 +116,9 @@ const Collectionscreen = (props) => {
 
   useEffect(() => {
     getCollectionHandler();
-  });
+    console.log("useEffect");
+  }, []);
+
   return (
     <div className="outerCollectionScreen">
       <div className="innerCollectionScreen">
@@ -145,7 +148,14 @@ const Collectionscreen = (props) => {
             >
               Copy link!
             </button>
-            <h4 className="countInfo">views:{viewCounts}</h4>
+            <h4
+              className="countInfo"
+              onClick={() => {
+                getCollectionHandler();
+              }}
+            >
+              views:{viewCounts}
+            </h4>
           </div>
         )}
         {linkList.map(function (item) {
