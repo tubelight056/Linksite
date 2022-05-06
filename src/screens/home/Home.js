@@ -4,7 +4,7 @@ import Collectioncard from "../../components/collectioncard/CollectionCard";
 import "./Home.css";
 import AddIcon from "./addIcon.ico";
 import { useHistory } from "react-router";
-import config from "../../config";
+import config from "../../url";
 
 const Home = (props) => {
   const history = useHistory();
