@@ -6,7 +6,7 @@ import LinkCard from "../../components/LinkCard/LinkCard";
 import ModelUpForAdd from "../../components/modelUp/modelUpForAdd";
 import ModelUpForUpdate from "../../components/modelUp/modelUpForUpdate";
 import { useHistory } from "react-router";
-import config from "../../config";
+import config from "../../url";
 
 const Collectionscreen = (props) => {
   const collectionId = props.match.params.id;
