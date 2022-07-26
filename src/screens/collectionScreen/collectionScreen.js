@@ -139,7 +139,7 @@ const Collectionscreen = (props) => {
             <button
               className="collectionButton"
               onClick={() => {
-                let text = `${config.API_URL}/collection/${collectionId}`;
+                let text = `https://linksite.vercel.app/collection/${collectionId}`;
                 navigator.clipboard.writeText(text);
                 onErrorHandler("Link copied with kind");
               }}
